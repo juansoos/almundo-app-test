@@ -4,7 +4,7 @@ App móvil hecha con React Native para la prueba del semillero de Almundo
 
 ## Getting Started
 
-Estas instrucciones le permitirán obtener una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y prueba. Se parte de la suposición que la persona que clonará el repositorio trabaja con el sistema operatio macOS.
+Estas instrucciones le permitirán obtener una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y prueba. Se parte de la suposición que la persona que clonará el repositorio trabaja con el sistema operativo macOS.
 
 ### Prerequisites
 
