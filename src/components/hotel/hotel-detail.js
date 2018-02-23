@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, TextInput, TouchableOpacity } from 'react-native';
-import HotelDetail from '../hotel/detail';
-import CommentList from '../comment-list';
+import { StyleSheet, View, Text } from 'react-native';
+import Detail from '../hotel/detail';
+import CommentList from '../comment/comment-list';
 
-class Hotel extends Component {
+class HotelDetail extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <HotelDetail hotel={this.props.hotel} />
+        <Detail hotel={this.props.hotel} />
         <View style={styles.title}>
           <Text style={styles.text}>Comentarios</Text>
         </View>
-        <CommentList comments={Array(50).fill({ title: 'Excelente hotel', content: 'Un excelente lugar para pasar vacaciones', author: 'Jhon Doe' })} />
+        <CommentList comments={this.props.hotel.comments} />
       </View>
     );
   }
@@ -34,4 +34,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Hotel;
+export default HotelDetail;
