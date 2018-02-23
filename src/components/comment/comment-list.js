@@ -1,23 +1,26 @@
 import React, { Component } from 'react';
-import { StyleSheet, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
 import Comment from './comment';
 
 class CommentList extends Component {
+  state = { comments: this.props.comments }
+  updateComments = (comments) => this.setState({ comments })
+  componentWillReceiveProps(newProps) {
+    if (newProps.comments !== this.props.comments) {
+      this.updateComments(newProps.comments)
+    }
+  }
   render() {
     return (
       <FlatList
-        style={styles.list}
-        data={this.props.comments}
-        renderItem={({item}) => <Comment comment={item} key={item._id} />}
+        refreshing={true}
+        data={this.state.comments}
+        extraData={this.state.comments}
+        keyExtractor={(item, index) => item._id}
+        renderItem={({item}) => <Comment comment={item} />}
       />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  list: {
-    paddingTop: 10,
-  },
-});
 
 export default CommentList;
