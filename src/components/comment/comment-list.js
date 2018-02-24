@@ -16,8 +16,8 @@ class CommentList extends Component {
         refreshing={true}
         data={this.state.comments}
         extraData={this.state.comments}
-        keyExtractor={(item, index) => item._id}
-        renderItem={({item}) => <Comment comment={item} />}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={({item, index}) => <Comment comment={item} key={index} />}
       />
     );
   }

@@ -8,6 +8,7 @@ class HotelList extends Component {
       <FlatList
         style={styles.list}
         data={this.props.hotels}
+        keyExtractor={(item, index) => index.toString()}
         renderItem={({item}) => <Hotel hotel={item} key={item._id} />}
       />
     );

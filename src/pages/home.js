@@ -46,7 +46,14 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     borderWidth: 1,
     marginHorizontal: 10,
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
+    borderColor: '#DBDBDB',
+    shadowColor: 'black',
+    shadowOpacity: .2,
+    shadowOffset: {
+      height: 2,
+    },
+    elevation: 2,
   },
   spinner: {
     paddingTop: 20,
